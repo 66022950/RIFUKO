@@ -1,17 +1,22 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
 content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./index.html"
 ],
 theme: {
     extend: {
-colors: {
-        background: "var(--color-background)",
-        foreground: "var(--color-foreground)",
+    colors: {
+        background: 'var(--color-background)',
+        foreground: 'var(--color-foreground)',
+        accent: 'var(--color-accent)',
     },
     fontFamily: {
-        sans: ["var(--font-sans)", "sans-serif"],
-        mono: ["var(--font-mono)", "monospace"],
+        sans: ['Geist Sans', 'ui-sans-serif', 'system-ui'],
+        mono: ['Geist Mono', 'ui-monospace', 'SFMono-Regular'],
     },
     },
 },
